@@ -119,3 +119,102 @@ while (distance > 10)
 }
 
 Console.WriteLine($"Количество раз, за которое собака пробежит, равно - {count}");
+
+
+//Напишите программу, которая на вход принимает два числа и выдаёт, 
+//какое число большее, а какое меньшее.
+
+Console.Clear();
+Console.Write("Введите A: ");
+int number1 = int.Parse(Console.ReadLine());
+Console.Write("Введите B: ");
+int number2 = int.Parse(Console.ReadLine());
+
+    if (number1 > number2)
+    {
+        Console.WriteLine("A больше B");
+    }
+    else if (number1 < number2)
+    {
+        Console.WriteLine("B больше A");
+    }
+    else
+    {
+        Console.WriteLine("A равно B");
+    }
+
+
+
+
+
+
+// Задача 4: Напишите программу, которая принимает на вход 
+// три числа и выдает максимальное из этих чисел.
+
+Console.Clear();
+Console.Write("Введите первое чило: ");
+number1 = int.Parse(Console.ReadLine());
+Console.Write("Введите второе число: ");
+number2 = int.Parse(Console.ReadLine());
+Console.Write("Введите третье число: ");
+int number3 = int.Parse(Console.ReadLine());
+
+int max = number1; // 10
+
+
+if (max < number2)//-10
+{
+    max = number2;
+}
+if (max < number3)//-15
+{
+    max = number3;
+}
+
+Console.WriteLine($"максимальное число = {max} {number1} {number2} {number3} ");
+
+//Напишите программу, которая на вход принимает число и выдаёт,
+// является ли число чётным (делится ли оно на два без остатка).
+
+Console.Clear();
+Console.Write("Введите число: ");
+int number = int.Parse(Console.ReadLine());
+
+if (number % 2 == 0)
+{
+    Console.WriteLine("Число четное");
+}
+else
+{
+    Console.WriteLine("Число нечетное");
+}
+
+//Напишите программу, которая на вход принимает число (N), 
+//а на выходе показывает все чётные числа от 1 до N.
+
+Console.Clear();
+Console.Write("Введите N: ");
+int numN = int.Parse(Console.ReadLine());
+
+//Первое решение
+int i = 1;
+while (i <= numN)//N=-15
+{
+    if (i % 2 == 0)
+    {
+        Console.Write($"{i} ");
+        
+    }
+    
+    i++;    
+}
+Console.WriteLine();
+
+//Второе решение
+i = 2;
+while (i <= numN)
+{
+    Console.Write($"{i} ");
+    i += 2;
+
+}
