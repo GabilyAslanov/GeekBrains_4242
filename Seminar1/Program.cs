@@ -130,18 +130,18 @@ int number1 = int.Parse(Console.ReadLine());
 Console.Write("Введите B: ");
 int number2 = int.Parse(Console.ReadLine());
 
-    if (number1 > number2)
-    {
-        Console.WriteLine("A больше B");
-    }
-    else if (number1 < number2)
-    {
-        Console.WriteLine("B больше A");
-    }
-    else
-    {
-        Console.WriteLine("A равно B");
-    }
+if (number1 > number2)
+{
+    Console.WriteLine("A больше B");
+}
+else if (number1 < number2)
+{
+    Console.WriteLine("B больше A");
+}
+else
+{
+    Console.WriteLine("A равно B");
+}
 
 
 
@@ -203,10 +203,10 @@ while (i <= numN)//N=-15
     if (i % 2 == 0)
     {
         Console.Write($"{i} ");
-        
+
     }
-    
-    i++;    
+
+    i++;
 }
 Console.WriteLine();
 
@@ -215,6 +215,8 @@ i = 2;
 while (i <= numN)
 {
     Console.Write($"{i} ");
-    i += 2;
+    i += 5;
+    i = i + 5;
 
 }
+
