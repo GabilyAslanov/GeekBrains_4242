@@ -162,23 +162,19 @@ void PrintIsWeekend(string dayWeek)
 
 bool ValidateWeekday(int dayWeek)
 {
-   return dayWeek >= 1 && dayWeek <= 7 ? true : false;
+    return dayWeek >= 1 && dayWeek <= 7 ? true : false;
 }
 
-bool IsWeekday(int dayWeek){ return dayWeek > 5 && dayWeek <= 7 ? true : false; }
+string PrintWeekendDay(int dayWeek)
+{
+    return dayWeek > 5 && dayWeek <= 7 ? "Weekend)))" : "Work day(((";
+}
 
 int weekDay = SetNumber("week day");
 
 if (ValidateWeekday(dayWeek))
 {
-    if (IsWeekday(weekDay))
-    {
-        System.Console.WriteLine("Weekend)))");
-    }
-    else
-    {
-        System.Console.WriteLine("Work day((()))");
-    }
+    System.Console.WriteLine(PrintWeekendDay(weekDay));
 }
 else
 {
