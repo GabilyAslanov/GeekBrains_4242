@@ -1,27 +1,40 @@
 ﻿
+//Универсальный математический для перевода из 10 в любую
+string DecToNum(int decNumber, int otherSystem)
+{
+    string res = "";
+    string nums = "0123456789ABCDEF";
+    while (decNumber > 0)
+    {
+        int ost = decNumber / otherSystem;
+        res = nums[decNumber - (otherSystem * ost)] + res;
+        decNumber /= otherSystem;
+    }
+    return res;
+}
+
 //Напишите программу, 
 //которая будет преобразовывать десятичное число в двоичное.
 
 Console.Clear();
-int number=int.Parse(Console.ReadLine());
+int number = int.Parse(Console.ReadLine());
 
-string res1=Convert.ToString(number,2);
-string res2=DecToNum(number,2);
+string res1 = Convert.ToString(number, 2);
+string res2 = DecToNum(number, 2);
 
 Console.WriteLine($"{number}->{res1}");
 Console.WriteLine($"{number}->{res2}");
 
 
-//Универсальный математический для перевода из 10 в любую
-string DecToNum(int decNumber, int otherSystem)
+string DecToNum1(int decNumber, int otherSystem)
 {
-    string res="";
-    string nums="0123456789ABCDEF";
-    while(decNumber>0)
+    string res = "";
+    string nums = "0123456789ABCDEF";
+    while (decNumber > 0)
     {
-        int ost=decNumber/otherSystem;
-        res=nums[decNumber-(otherSystem*ost)]+res;
-        decNumber/=otherSystem;
+        int ost = decNumber / otherSystem;
+        res = nums[decNumber - (otherSystem * ost)] + res;
+        decNumber /= otherSystem;
     }
     return res;
 }
@@ -42,7 +55,7 @@ Console.WriteLine($"[{String.Join(",", array)}]");
 
 void MyReverse2(int[] array)
 {
-    for (int i = 0; i < array.Length/2; i++)
+    for (int i = 0; i < array.Length / 2; i++)
     {
         int tmp = array[i];
         array[i] = array[array.Length - 1 - i];
